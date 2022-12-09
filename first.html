@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body  {
+          background-image: url("image.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        myDiv {
+          width:400px;
+          margin:100px auto 0px auto;
+          border: 5px outset red;
+          background-color: rgba(237, 226, 227, 0.895);    
+          text-align: center;
+        }
+        </style>
+</head>
+<body>
+  <div class="myDiv">
+<h1 style="text-align:center">Book a call</h1>
+
+<h5 style="text-align:center">Book a call slot our representative will call you within 1hr of selected time</h5>
+<hr>
+<form style="text-align:center" action="#" onsubmit="register()">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="Name"><br>
+  <label for="email">Email:</label><br>
+  <input type="text" id="email" name="Email"><br>
+  <label for="phone">Phone:</label><br>
+  <input type="number" id="phone" name="phone" pattern="[0-9]{10}"><br>
+  <label for="time">Time for call:</label><br>
+  <input type="date"id="date" name="date" placeholder="22/11/2020">
+  <input type="time"id="time" name="time" placeholder="11:00"><br>
+  <input style="background-color:orange" type="submit" value="Get a call">
+</form>
+<Script>
+  function register(){
+    const name=document.getElementById('name').value;
+    console.log(name);
+    const email=document.getElementById('email').value;
+    console.log(email);
+    const date=document.getElementById('date').value;
+    console.log(date);
+    const time=document.getElementById('time').value;
+    console.log(time);
+  }
+</Script>
+</div>
+</body>
+</html>
