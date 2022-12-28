@@ -1,5 +1,5 @@
 
-//call
+/* //call
 var obj={num:2};
 var addToThis=function(a,b,c){
     return this.num+a+b+c;
@@ -53,3 +53,4 @@ mul2(3);
 
 let mul3=multiply(3);
 mul3(3);
+ */

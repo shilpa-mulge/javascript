@@ -16,11 +16,11 @@
             <div class="row"  >
                 <div class="col">
             <lable for="amount" class="form-label">amount</lable>
-            <input type="number" class="form-control" name="amt">
+            <input type="number" id="amount" class="form-control" name="amt">
         </div>
         <div class="col">
             <lable for="discription" class="form-label"> description</lable>
-            <input type="text"class="form-control" name="des">
+            <input type="text"id="discription" class="form-control" name="des">
         </div>
         <div class="col">
             <lable for="category" class="form-label">category</lable>
@@ -66,9 +66,16 @@ function show(item){
  const list=document.getElementById('list');
  const child=`<li id='${item.cat}'>${item.amt}-${item.des}-${item.cat}
     <button onclick="deleteu('${item.cat}')">Delete</button>
-    <button onclick="deleteu('${item.cat}')">Edit</button>
+    <button onclick="editu('${item.cat},${item.amt},${item.des}')">Edit</button>
  </li>`
  list.innerHTML=list.innerHTML+child
+}
+function editu(cat,amt,des){
+document.getElementById('amount').value=amt;
+document.getElementById('discription').value=des;
+document.getElementById('category').value=cat;
+console.log(cat)
+deleteu(cat);
 }
 function deleteu(data){
 localStorage.removeItem(data)
