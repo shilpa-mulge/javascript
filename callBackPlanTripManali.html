@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function buyCar(cb1,cb2){
+        setTimeout(()=>{
+            console.log("buy car")
+            cb1(cb2);
+        },1000);
+}
+function planManali(cb1){
+        setTimeout(()=>{
+            console.log("lets go to manali")
+            cb1()
+        },2000);
+}
+function reachManali(){
+        setTimeout(()=>{
+            console.log("reached to manali")
+        },2000);
+}
+buyCar(planManali,reachManali)
+    </script>
+</body>
+</html>
