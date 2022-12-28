@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Person1: shows ticket")
+console.log("Person2: shows ticket")
+        const preMovie=async ()=>{
+            const promiseWifeBringingTicket=new Promise(
+                (resolve,reject)=>{
+                setTimeout(()=>{
+                resolve('ticket');
+            },3000)     
+                }
+            );
+const popcorn=new Promise((resolve,reject)=>resolve(`popcorn`));
+const butter=new Promise((resolve,reject)=>resolve(`butter`));
+const colddrink=new Promise((resolve,reject)=>resolve(`colddrink`))
+
+let ticket=await promiseWifeBringingTicket;
+
+console.log('husband: we should go in');
+console.log('wife: no i am hungry');
+
+let pop=await popcorn;
+
+console.log('husband: i got popcorn');
+console.log('wife: i need butter on my popcorn')
+
+let but=await butter;
+
+console.log("husband:i got butter");
+console.log("wife:i need cold drink")
+
+let cold=await colddrink;
+
+console.log('husband: i got colddrink')
+console.log('wife: thank you we should go')
+
+return ticket;
+        }
+        preMovie().then((m)=>console.log(`person3: shows ${m}`))
+
+        console.log("Person4: shows ticket")
+console.log("Person5: shows ticket")
+    </script>
+</body>
+</html>
